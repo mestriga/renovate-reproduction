@@ -1,0 +1,9 @@
+on: [workflow_call]
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: This is extracted by renovate
+        uses: docker://ghcr.io/renovatebot/renovate:42.32.0
+      - uses: docker://ghcr.io/renovatebot/renovate:42.32.0
+        name: This is NOT extracted by renovate
